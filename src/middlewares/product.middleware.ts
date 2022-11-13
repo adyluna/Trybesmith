@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-const validateName = async (req: Request, res: Response, next: NextFunction) => {
+const validateName = (req: Request, res: Response, next: NextFunction) => {
   const { name } = req.body;
   
   if (!name) {
@@ -16,7 +16,7 @@ const validateName = async (req: Request, res: Response, next: NextFunction) => 
   next();
 };
 
-const validateAmount = async (req: Request, res: Response, next: NextFunction) => {
+const validateAmount = (req: Request, res: Response, next: NextFunction) => {
   const { amount } = req.body;
   
   if (!amount) {

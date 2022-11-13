@@ -17,6 +17,10 @@ class ProductService {
     const products = await this.model.getAll();
     return products;
   }
+
+  public async update(orderId: number, productId:number) {
+    this.model.update(orderId, productId);
+  }
 }
 
 export default ProductService;

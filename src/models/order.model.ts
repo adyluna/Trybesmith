@@ -22,17 +22,17 @@ export default class OrderModel {
     return rows as OrderInterface[];
   }
 
-  public async create(userId: number, productsIds: number[]): Promise<OrderInterface> {
+  public async create(userId: number): Promise<number> {
     const result = await this
       .connection
       .execute<ResultSetHeader>(
       'INSERT INTO Trybesmith.Orders (userId) VALUES (?)',
-      [...productsIds],
+      [userId],
     );
     
     const [dataInserted] = result;
     const { insertId } = dataInserted;
 
-    return { id: insertId, userId, productsIds };
+    return insertId;
   }
 }

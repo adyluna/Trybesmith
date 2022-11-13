@@ -10,11 +10,16 @@ class OrderController {
   };
 
   public create = async (req: Request, res: Response) => {
-    const productsIds = req.body;
-    const { userId } = req.body.userInfo;
-    const createdOrder = await this.orderService.create(userId, productsIds);
+    const products = req.body.productsIds;
+    const { id } = req.body.user.data;
+    
+    const result = await this.orderService.create(id, products);
 
-    res.status(200).json(createdOrder);
+    if (!result) {
+      return res.status(400).json({ message: 'INVALID PRODUCT ID' });
+    }
+
+    res.status(201).json({ userId: id, productsIds: products });
   };
 }
 
