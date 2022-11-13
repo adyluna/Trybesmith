@@ -11,10 +11,12 @@ class OrderService {
 
   public async getAll(): Promise<OrderInteface[]> {
     const orders = await this.model.getAll();
-
-    console.log(orders);
-    
     return orders;
+  }
+
+  public async create(userId: number, productsIds: number[]): Promise<OrderInteface> {
+    const createdOrder = this.model.create(userId, productsIds);
+    return createdOrder;
   }
 }
 

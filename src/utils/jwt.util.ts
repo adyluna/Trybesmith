@@ -14,14 +14,13 @@ export default class Jwt {
     return token;
   };
 
-  public verifyToken = (token: string): UserInterface => {
-    const secret = process.env.JWT_SECRET || 'secret';
-
+  public validateToken = (token: string): (UserInterface | null) => {
     try {
-      const decoded = this.jwt.verify(token, process.env.JWT_SECRET || secret) as UserInterface;
+      const secret = process.env.JWT_SECRET || 'secret';
+      const decoded = this.jwt.verify(token, secret) as UserInterface;
       return decoded;
-    } catch (err) {
-      throw new Error('Invalid token');
+    } catch (e) {
+      return null;
     }
   };
 }
