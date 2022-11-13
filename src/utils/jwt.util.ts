@@ -13,4 +13,15 @@ export default class Jwt {
 
     return token;
   };
+
+  public verifyToken = (token: string): UserInterface => {
+    const secret = process.env.JWT_SECRET || 'secret';
+
+    try {
+      const decoded = this.jwt.verify(token, process.env.JWT_SECRET || secret) as UserInterface;
+      return decoded;
+    } catch (err) {
+      throw new Error('Invalid token');
+    }
+  };
 }
