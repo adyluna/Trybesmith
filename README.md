@@ -8,9 +8,13 @@ A arquitetura da aplicação seguiu o modelo MSC (Model, Service, Controller) e 
 ## Técnologias usadas
 
 Typescript
+
 NodeJs
+
 JWT
+
 Docker
+
 MySql
 
 ## Antes de começar
