@@ -1,13 +1,31 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Trybesmith
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+# Contexto
+O projeto foi desenvolvido com o objetivo de desenvolver habilidades de Typescript. Se trata de uma loja de itens medievais, no formato de uma API, utilizando Typescript.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+A arquitetura da aplicação seguiu o modelo MSC (Model, Service, Controller) e por meio dela é possível realizar operações básicas que se pode fazer em um determinado banco de dados: Criação, Leitura, Atualização, Exclusão - o famoso CRUD.
+
+## Técnologias usadas
+
+Typescript
+NodeJs
+JWT
+Docker
+MySql
+
+## Antes de começar
+
+Clone o repositório
+
+  - `git clone git@github.com:adyluna/trybesmith.git`.
+
+## Instalando Dependências
+
+  - Entre na pasta do repositório que você acabou de clonar:
+    - `cd trybesmith`
+    -  `npm install`
+
+## Executando aplicação
+
+    - `npm start`
+    
