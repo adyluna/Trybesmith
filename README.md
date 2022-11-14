@@ -31,5 +31,5 @@ Clone o repositório
 
 ## Executando aplicação
 
-    - `npm start`
+    - npm start
     
